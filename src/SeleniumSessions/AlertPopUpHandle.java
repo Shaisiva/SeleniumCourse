@@ -9,7 +9,7 @@ public class AlertPopUpHandle {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		
+		try{
 		System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
 		WebDriver driver = new ChromeDriver(); //launch chrome
 		
@@ -35,6 +35,10 @@ public class AlertPopUpHandle {
 		alert.accept(); //click on OK btn
 		
 		//alert.dismiss(); //click on cancel btn
+		}catch(Exception e){
+			System.out.println("error msg is:"+ e.printStackTrace())
+			
+		}
 		
 	}
 
